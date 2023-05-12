@@ -1,24 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import YbCoreNavBar from "@yb-core-nav-bar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <YbCoreNavBar
+          componentType='Web'
+          items={items}
+          leftIcon={leftIcon}
+          logoIcon={logoIcon}
+          searchStyle={{width: 180, height: 32, paddingLeft: 13}}
+          onChangeSearchText={(text) => console.log('Search ', text)}
+          notificationCount={88}
+          onClickNotification={() => console.log('On click notification')}
+          userName="Test User"
+          userMenuItems={avatarMenuItems}
+          userPicURI={SAMPLE_ICON}
+          styleConnector={styleConnector}
+      />
+    </>
   );
 }
 

@@ -6,13 +6,17 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@yubi/yb-core-nav-bar": "^0.2.0",
+    "@yubi/yb-style-provider": "^2.1.2-beta2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-native": "^0.71.7",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:qa": "HOST=local.go-yubi.in PORT=3000 env-cmd -f .env.qa react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -34,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
   }
 }
